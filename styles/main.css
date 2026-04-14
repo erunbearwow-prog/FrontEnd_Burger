@@ -1,4 +1,171 @@
+:root {
+  --open-sans: "Open Sans", sans-serif;
+  --nunito-sans: "Nunito Sans", sans-serif;
+
+  --accent-light: #ffc725;
+  --accent-dark: #f37335;
+  --dark: #443737;
+  --white: #ffffff;
+  --light-rgb: 255, 255, 255;
+
+  --hero-image: url(../images/hero.jpg);
+}
+
 body {
-    font-family: "Open Sans", sans-serif;
-    /* font-family: "Nunito Sans", sans-serif; */
+  font-family: var(--open-sans);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1182px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-left: 15px;
+}
+/* header block */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 196px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.logo {
+  display: block;
+  width: 176px;
+  height: 56px;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  gap: 46px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none; /* Убираем стандартное подчёркивание */
+  color: #333; /* Цвет текста */
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Отступ от текста */
+  left: 50%; /* Позиционируем из центра */
+  width: 100%; /* Полная ширина сразу */
+  height: 2px; /* Толщина линии */
+  background-color: var(--accent-light); /* Цвет подчёркивания */
+  transform: translateX(-50%) scaleX(0); /* Начинаем с нулевого масштаба */
+  transform-origin: center; /* Точка трансформации — центр */
+  border-radius: 1.5px; /* Скругление углов */
+  transition: transform 0.3s ease-in-out; /* Анимация трансформации */
+}
+
+.nav-link:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Растягиваем до 100 % */
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+}
+
+.cart::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 26px;
+  background-image: url(../images/shopping-cart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cart-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  color: var(--white);
+  background-color: var(--accent-dark);
+  border-radius: 100%;
+  position: absolute;
+  left: 17px;
+  bottom: 0px;
+}
+/* end of header block */
+
+/* hero block */
+.hero {
+  background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding-top: 142px;
+  padding-bottom: 142px;
+}
+
+.hero-title {
+  color: rgb(var(--light-rgb));
+  font-family: var(--nunito-sans);
+  text-transform: capitalize;
+  font-size: 79px;
+  font-weight: 700;
+}
+
+.hero-description {
+max-width: 320px;
+margin: 0 auto;
+  font-family: var(--nunito-sans);
+  color: rgb(var(--light-rgb), 0.8);
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  gap: 16px;
+  padding-left: 0px;
+  color: rgba(var(--light-rgb), 0.5);
+}
+
+.breadcrumbs-link {
+  color: rgba(var(--light-rgb), 0.5);
+}
+
+.breadcrumbs-link:hover {
+  color: var(--accent-light);
+}
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "/";
+  position: absolute;
+  right: -11px;
 }
