@@ -9,6 +9,7 @@
   --light-rgb: 255, 255, 255;
 
   --hero-image: url(../images/hero.jpg);
+  --banner-image: url(../images/homemade-tasty-beef-burger.jpg);
 }
 
 body {
@@ -20,11 +21,12 @@ a {
 }
 
 .container {
+  /* background-color: red; */
   width: 100%;
   max-width: 1182px;
   margin: 0 auto;
   padding-left: 15px;
-  padding-left: 15px;
+  padding-right: 15px;
 }
 /* header block */
 .header {
@@ -47,7 +49,7 @@ a {
 .nav {
   flex-grow: 1;
   display: flex;
-  gap: 46px;
+  gap: 47px;
 }
 
 .nav-link {
@@ -116,7 +118,7 @@ a {
   background-image: var(--hero-image);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   text-align: center;
   padding-top: 142px;
   padding-bottom: 142px;
@@ -128,11 +130,13 @@ a {
   text-transform: capitalize;
   font-size: 79px;
   font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 18px;
 }
 
 .hero-description {
-max-width: 320px;
-margin: 0 auto;
+  max-width: 320px;
+  margin: 0 auto;
   font-family: var(--nunito-sans);
   color: rgb(var(--light-rgb), 0.8);
   font-size: 15px;
@@ -168,4 +172,180 @@ margin: 0 auto;
   content: "/";
   position: absolute;
   right: -11px;
+}
+
+/* banner block */
+.banner {
+  padding-top: 142px;
+  padding-bottom: 100px;
+}
+
+.banner-wrapper {
+  padding-top: 49px;
+  padding-left: 100px;
+  padding-bottom: 100px;
+  background-image: var(--banner-image);
+  margin-bottom: 0px;
+}
+
+.banner-discount {
+  display: block;
+  font-family: var(--open-sans);
+  color: rgba(var(--light-rgb), 1);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--accent-dark);
+  border-radius: 14px;
+  width: 88px;
+  padding: 5px;
+  margin-bottom: 7px;
+}
+
+.banner-wrapper h2 {
+  font-family: var(--nunito-sans);
+  color: rgba(var(--light-rgb), 1);
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 9px;
+}
+
+.banner-description {
+  color: rgba(var(--light-rgb), 0.8);
+  font-family: var(--open-sans);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 353px;
+}
+
+.banner-btn {
+  font-family: var(--nunito-sans);
+  font-style: Bold;
+  font-size: 14px;
+  font-weight: 700;
+  width: 170px;
+  height: 58px;
+  background-color: var(--accent-light);
+  border-width: 0px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.banner-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Menu block */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+}
+#drop-down {
+  font-family: "Open Sans";
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 277px;
+  height: 42px;
+  border-radius: 22px;
+  padding: 20px;
+  margin-top: 6px;
+}
+
+.menu-title {
+  margin-top: 0px;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-family: var(--nunito-sans);
+  font-style: Bold;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.menu-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 50px 20px;
+}
+
+.menu-thumb {
+  width: 100%;
+  height: 430px;
+  position: relative;
+  overflow: hidden;
+}
+.menu-thumb img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--nunito-sans);
+  text-align: center;
+  gap: 0px;
+  padding-bottom: 0px;
+  
+}
+
+.menu-name {
+font-size: 30px;
+font-weight: 600;
+line-height: 38px;
+  padding-top: 21px;;
+  margin: 0px;
+}
+
+.menu-price {
+  color: rgba(68, 55, 55, 0.5);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 5px;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: none;
+  background-color: rgba(251, 183, 49, 1);
+  color: rgba(68, 55, 55, 1);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  padding-left: 60px;
+  width: 152px;
+  height: 38px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+
+  background-image: url(../images/cart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
