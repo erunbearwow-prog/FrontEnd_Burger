@@ -110,7 +110,7 @@ a {
 .cart-count {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:center           ;
   width: 17px;
   height: 17px;
   color: var(--white);

@@ -1,0 +1,70 @@
+:root {
+  --open-sans: "Open Sans", sans-serif;
+  --nunito-sans: "Nunito Sans", sans-serif;
+
+  --1: rgba(242, 212, 77, 1);
+  --2: rgba(242, 147, 65, 1);
+  --3: rgba(237, 93, 4, 1);
+  --4: rgba(112, 31, 4, 1);
+  --5: rgba(65, 2, 2, 1);
+
+  --hero-image: url(../images/hero.jpg);
+  --banner-image: url(../images/homemade-tasty-beef-burger.jpg);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+
+/* Color Theme Swatches in RGBA */
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  font-family: Verdana, sans-serif;
+  margin: 0 auto;
+  padding: 5px 15px;
+  width: 810px;
+  background-color: var(--3);
+  height: 56px;
+  display: flex;
+}
+
+.logo {
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  height: 56px;
+  width: 178px;
+}
+
+.mainmenu {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mainmenu li a {
+  color: white;
+    margin: 0;
+  padding: 0;
+}
+
+.last-item {
+    margin-left: auto;
+}
+
+
